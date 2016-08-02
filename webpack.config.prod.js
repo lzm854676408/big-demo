@@ -15,4 +15,3 @@ module.exports = {
     ]
   }
 };
-Contact GitHub API Training Shop Blog About
