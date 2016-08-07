@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import map from 'lodash/collection/map';
+import map from 'lodash/map';
 import axios from 'axios';
 
 import BlogCard from './BlogCard.js';

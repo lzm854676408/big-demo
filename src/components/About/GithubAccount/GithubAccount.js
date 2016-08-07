@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Card} from 'material-ui/Card';
-import isEmpty from 'lodash/lang/isEmpty';
+import isEmpty from 'lodash/isEmpty';
 import UserInfo from './UserInfo1';
 import Repos from './Repos';
 import github from './github';

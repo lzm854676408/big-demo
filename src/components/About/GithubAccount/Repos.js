@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import map from 'lodash/collection/map';
+import map from 'lodash/map';
 
 class Repos extends Component {
   render() {
