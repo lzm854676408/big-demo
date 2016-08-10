@@ -13,7 +13,7 @@ class Post extends Component {
 
   componentDidMount(){
     // use math random to avoid browser cache
-    let address = `https://raw.githubusercontent.com/happypeter/big-demo/master/posts/git-tips.md?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/lzm854676408/big-demo/master/posts/git-tips.md?v=${Math.random()}`
     axios.get(address).then((res) => {
       console.log(res);
       console.log(address);

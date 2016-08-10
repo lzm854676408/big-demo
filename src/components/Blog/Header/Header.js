@@ -20,7 +20,7 @@ class Header extends Component {
     const styles = this.getStyles();
     return (
       <div style={styles.root}>
-         <Search />
+         <Search handleSearch={this.props.change}/>
       </div>
     );
   }

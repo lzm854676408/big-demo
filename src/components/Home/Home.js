@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import NavBar from './NavBar';
+import Works from './Works';
 
 class Home extends React.Component {
   render () {
@@ -30,6 +31,7 @@ class Home extends React.Component {
           <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>MY<br/>PRODUCTION</span></h1>
           <NavBar />
         </div>
+        <Works />
       </div>
     )
   }
