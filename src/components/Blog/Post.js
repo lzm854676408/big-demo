@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import marked from 'marked';
+import hljs from 'highlight.js'
 
 
 class Post extends Component {
@@ -13,7 +14,7 @@ class Post extends Component {
 
   componentDidMount(){
     // use math random to avoid browser cache
-    let address = `https://raw.githubusercontent.com/lzm854676408/big-demo/master/posts/${this.propos.params.title}.md?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/lzm854676408/big-demo/master/posts/${this.props.params.title}.md?v=${Math.random()}`
     axios.get(address).then((res) => {
       this.setState({
         rawContent: res.data,
@@ -22,6 +23,11 @@ class Post extends Component {
   }
 
   render(){
+    marked.setOptions({
+      highlight:function(code){
+        return hljs.highlightAuto(code).value;
+      }
+    });
     let content = marked(this.state.rawContent!='' ? this.state.rawContent : '请稍等......' );
 
     return(

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import {hashHistory} from 'react-router';
 
 class BlogCard extends Component {
-  handleClikc(){
-    this.context.router.push(`blog/${this.propos.url}`);
+  handleClick(){
+    this.context.router.push(`blog/${this.props.url}`);
   }
   render(){
     let styles={
@@ -49,6 +50,9 @@ BlogCard.defaultProps = {
   title: "请输入标题",
   index: 1,
   date: '2016.7.19',
+};
+BlogCard.contextTypes = {
+  router:React.PropTypes.object.isRequired
 };
 
 export default BlogCard;
