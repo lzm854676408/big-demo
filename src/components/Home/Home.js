@@ -8,7 +8,7 @@ class Home extends React.Component {
       root:{
         width:'100vw',
         height:'100vh',
-        background: 'url("http://7xopqp.com1.z0.glb.clouddn.com/newming24.jpg") no-repeat fixed center center/cover'
+        background: 'url("http://oboawdjd1.bkt.clouddn.com/37179063_14.jpg") no-repeat fixed center center/cover'
       },
       title:{
         color:'#fff',
@@ -26,11 +26,14 @@ class Home extends React.Component {
       }
     }
     return(
-      <div style={styles.root}>
-        <div style={styles.cover}>
-          <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>MY<br/>PRODUCTION</span></h1>
-          <NavBar />
+      <div>
+        <div style={styles.root}>
+          <div style={styles.cover}>
+            <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>MY<br/>PRODUCTION</span></h1>
+            <NavBar />
+          </div>
         </div>
+        <h1 style={{color:'#777',textAlign:'center',lineHeight:'90px'}}>我的个人作品</h1>
         <Works />
       </div>
     )

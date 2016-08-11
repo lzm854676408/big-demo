@@ -25,21 +25,26 @@ class NavBar extends React.Component {
     let styles={
       menu:{
         textAlign:'center',
-        backgroundColor:'#40C4FF',
+        backgroundColor:'rgba(0,0,0,0.8)',
+        marginTop:'50px',
       },
       link:{
         textDecoration:'none',
         display:'block'
+      },
+      drawer:{
+        backgroundColor:'rgba(0,0,0,0.5)',
       }
     }
     return (
       <div>
         <IconButton tooltip="menu"
         onClick={this.handleToggle.bind(this)}
-        style={{position:'absolute',top:'10px',left:'10px'}}>
+        style={{position:'absolute',top:'10px',left:'75px'}}>
         <Menu color="#FF1744"/>
         </IconButton>
         <Drawer
+          containerStyle={styles.drawer}
           docked={false}
           width={200}
           open={this.state.open}
