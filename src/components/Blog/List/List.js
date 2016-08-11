@@ -51,7 +51,7 @@ class List extends Component {
           let query=new RegExp(this.props.search,"i");
           for (var key in posts) {
             if (query.test(posts[key].title)) {
-              blogCards.push(<BlogCard title={posts[key].title} date={posts[key].date} index={posts[key].index} key={Math.random()}/>)
+              blogCards.push(<BlogCard title={posts[key].title} date={posts[key].date} index={posts[key].index} url={b.name} key={Math.random()}/>)
           }
         }
       }

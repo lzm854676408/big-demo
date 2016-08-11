@@ -7,27 +7,25 @@ class Post extends Component {
   constructor(){
     super();
     this.state={
-      rawContent: ''
+      rawContent: '',
     }
   }
 
   componentDidMount(){
     // use math random to avoid browser cache
-    let address = `https://raw.githubusercontent.com/lzm854676408/big-demo/master/posts/git-tips.md?v=${Math.random()}`
+    let address = `https://raw.githubusercontent.com/lzm854676408/big-demo/master/posts/${this.propos.params.title}.md?v=${Math.random()}`
     axios.get(address).then((res) => {
-      console.log(res);
-      console.log(address);
       this.setState({
-        rawContent: res.data
+        rawContent: res.data,
       });
     });
   }
 
   render(){
     let content = marked(this.state.rawContent!='' ? this.state.rawContent : '请稍等......' );
+
     return(
       <div>
-        { this.props.params.title }
         <div className="post-content">
           <span dangerouslySetInnerHTML={{__html: content}} />
         </div>
